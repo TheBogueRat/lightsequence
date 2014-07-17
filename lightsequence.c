@@ -27,7 +27,7 @@ void midi_open(void)
 {
     snd_seq_open(&seq_handle, "default", SND_SEQ_OPEN_INPUT, 0);
 
-    snd_seq_set_client_name(seq_handle, "LightOrgan8");
+    snd_seq_set_client_name(seq_handle, "LightSequence");
     in_port = snd_seq_create_simple_port(seq_handle, "listen:in",
                       SND_SEQ_PORT_CAP_WRITE|SND_SEQ_PORT_CAP_SUBS_WRITE,
                       SND_SEQ_PORT_TYPE_APPLICATION);
@@ -53,6 +53,11 @@ int pinChannels[MY_NUM_PINS];
 
 //Enabled channels
 int playChannels[2];  //Changed from 16 to 2
+
+//Map Notes to Pins
+void mapNotesToPins() {
+    // Need to 
+}
 
 void clearPinNotes() {
    int i;

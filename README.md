@@ -57,10 +57,12 @@ Connect pins as appropriate to your setup.
 
 <b>MIDI file creation:</b>
 
-You should be able to use any midi file but the purpose of this program is to design a specific light sequence.  I've been using the open source program MidiEditor to drop notes into patterns.  Sounds terrible when played but gives me a complete control of the pattern.  Details at ...coming soon
+You should be able to use any midi file but the purpose of this program is to design a specific light sequence.  I've been using the open source program, Aria Maestosa, to drop notes into patterns on channel 0 on the 8 notes starting at C.  Each note toggles a corresponding relay on/off.  The midi sounds terrible when played but gives me a complete control of the pattern.  An MP3 is played to the speaker and the Midi file is played to the GPIO.  Details at ...coming soon at http://hobbies.boguerat.com/?page_id=139
 
 <b>Test files included in the repo:</b>
 
 midilighttest8.mid - Tests playing first 8 notes on Channel 0.  Cycles pins from 0 to 7 in progressively faster scales.  1/4 second notes through 1/32 second notes.
 
-midilighttest16.mid - Eight notes played on Channels 0 & 1.  Untested until I get another SSR board.
+midilighttest16.mid - Eight notes played on each Channel, 0 and 1.  Untested until I get another SSR board.
+
+mpg123 mortalkombat2.mp3 & sleep 2.3 && aplaymidi –port 14:0 mcnodrum.mid
